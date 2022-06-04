@@ -1,11 +1,10 @@
-function formatMessage(message, maxLength) {
-  let result;
-  // Change code below this line
-  if (message.length <= maxLength) {
-    result = message;
-  } else {
-    result = message.slice(maxLength) + "...";
+for (let i = 0; i <= 7; i += 1) {
+  console.log(i);
+
+  if (i === 6) {
+    console.log("Нашли число 6, прерываем выполнение цикла");
+    break;
   }
-  /// Change code above this line
-  return result;
 }
+
+console.log("Лог после цикла");
