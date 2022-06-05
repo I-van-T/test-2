@@ -1,10 +1,23 @@
-for (let i = 0; i <= 7; i += 1) {
-  console.log(i);
 
-  if (i === 6) {
-    console.log("Нашли число 6, прерываем выполнение цикла");
-    break;
-  }
-}
+const message = "JavaScript is in my blood";
+const array = message.split(" ");
+console.log(array);
+const calcWords = array.length;
+console.log(calcWords);
 
-console.log("Лог после цикла");
+
+// const pricePerWord = 10;
+
+// ?function calculateEngravingPrice(message, pricePerWord) {
+//    // Change code below this line
+// // let totalPrice;
+  
+// // let array;
+// //   array = message.split(" ");
+//   console.log(message.split(" "));
+// const calcWords = array.lenght - 1;
+// totalPrice = calcWords * pricePerWord;
+
+// return totalPrice;
+   // Change code above this line
+// }
