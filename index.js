@@ -1,23 +1,11 @@
+const clients = ["Mango", "Ajax", "Poly"];
 
-const message = "JavaScript is in my blood";
-const array = message.split(" ");
-console.log(array);
-const calcWords = array.length;
-console.log(calcWords);
+for (const client of clients) {
+  console.log(client);
+}
 
+const string = "javascript";
 
-// const pricePerWord = 10;
-
-// ?function calculateEngravingPrice(message, pricePerWord) {
-//    // Change code below this line
-// // let totalPrice;
-  
-// // let array;
-// //   array = message.split(" ");
-//   console.log(message.split(" "));
-// const calcWords = array.lenght - 1;
-// totalPrice = calcWords * pricePerWord;
-
-// return totalPrice;
-   // Change code above this line
-// }
+for (const character of string) {
+  console.log(character);
+}
