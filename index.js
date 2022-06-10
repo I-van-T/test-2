@@ -1,16 +1,33 @@
-// ✅ Логически и синтаксически сгруппированные сущности
-const bookShelf = {
-  books: ["The Last Kingdom", "Dream Guardian"],
-  // Это метод объекта
-  getBooks() {
-    console.log("Этот метод будет возвращать все книги - свойство books");
-  },
-  // Это метод объекта
-  addBook(bookName) {
-    console.log("Этот метод будет добавлять новую книгу в свойство books");
-  },
-};
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
 
-// Вызовы методов
-bookShelf.getBooks();
-bookShelf.addBook("Новая книга");
+function getAllPropValues(priceses) {
+
+  const allPrice = [];
+  for (const product of products) {
+    console.log(product.price);
+    allPrice.push(product.price);
+  }
+
+  return allPrice;
+  // Change code below this line
+// const allValues = [];
+// for (const product of products) {
+//   allValues.push(product.propName);
+  
+// }
+
+// return allValues;
+  
+  
+  
+  // Change code above this line
+}
+
+
+console.log(getAllPropValues("price"))
+
