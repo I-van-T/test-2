@@ -1,33 +1,21 @@
-const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
-];
+const user = {
+  name: "Jacques Gluke",
+  tag: "jgluke",
+  stats: {
+    followers: 5603,
+    views: 4827,
+    likes: 1300,
+  },
+};
 
-function getAllPropValues(priceses) {
+const {
+  name,
+  tag,
+  stats: { followers, views: userViews, likes: userLikes = 0 },
+} = user;
 
-  const allPrice = [];
-  for (const product of products) {
-    console.log(product.price);
-    allPrice.push(product.price);
-  }
-
-  return allPrice;
-  // Change code below this line
-// const allValues = [];
-// for (const product of products) {
-//   allValues.push(product.propName);
-  
-// }
-
-// return allValues;
-  
-  
-  
-  // Change code above this line
-}
-
-
-console.log(getAllPropValues("price"))
-
+console.log(name); // Jacques Gluke
+console.log(tag); // jgluke
+console.log(followers); // 5603
+console.log(userViews); // 4827
+console.log(userLikes); // 1308
