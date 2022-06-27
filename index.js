@@ -1,21 +1,19 @@
-const user = {
-  name: "Jacques Gluke",
-  tag: "jgluke",
-  stats: {
-    followers: 5603,
-    views: 4827,
-    likes: 1300,
-  },
-};
+const main = document.querySelector("#main");
 
-const {
-  name,
-  tag,
-  stats: { followers, views: userViews, likes: userLikes = 0 },
-} = user;
 
-console.log(name); // Jacques Gluke
-console.log(tag); // jgluke
-console.log(followers); // 5603
-console.log(userViews); // 4827
-console.log(userLikes); // 1308
+// создаем элемент
+const title = document.createElement("h1");
+const figure = document.createElement("figure")
+
+// вставляем элемент
+title.id = "title";
+figure.id = "img-div"
+
+// вставляем текст
+title.textContent = "- Michel Legrand -"
+
+
+//выводим на страницу
+
+main.append(title);
+main.append(figure);
