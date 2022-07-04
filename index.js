@@ -1,5 +1,3 @@
-'use strict';
-
-const clients = ['Mango', 'Poly', 'Ajax'];
+let clients = ['Mango', 'Poly', 'Ajax', 'Kiwi'];
 
 console.table(clients);
