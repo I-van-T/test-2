@@ -1,16 +1,23 @@
-const apartment = {
-  descr: 'Spacious apartment in the city center',
-  rating: 4,
-  price: 2153,
-};
-const values = [];
-// Change code below this line
-const keys = Object.keys(apartment);
+const products = [
+  { name: 'Radar', price: 1300, quantity: 4 },
+  { name: 'Scanner', price: 2700, quantity: 3 },
+  { name: 'Droid', price: 400, quantity: 7 },
+  { name: 'Grip', price: 1200, quantity: 9 },
+];
 
-console.log(keys);
+function getAllPropValues(propName) {
+  // Change code below this line
+  const newArray = [];
+  const keys = Object.keys(products);
+  const values = Object.values(products);
+  for (const key of keys) {
+    if (propName === key) {
+      newArray.push(products.values);
 
-for (const key of keys) {
-  values.push(apartment[key]);
+      return newArray;
+    }
+    console.log(newArray);
+  }
+
+  // Change code above this line
 }
-
-console.log(values);
