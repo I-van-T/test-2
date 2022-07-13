@@ -1,16 +1,16 @@
-function includes(array, value) {
-  // Change code below this line
-  for (let arr of array) {
-    if (arr === value) {
-      return true;
-    }
+const apartment = {
+  descr: 'Spacious apartment in the city center',
+  rating: 4,
+  price: 2153,
+};
+const values = [];
+// Change code below this line
+const keys = Object.keys(apartment);
 
-    if (arr !== value) {
-      return false;
-    }
-  }
-  // Change code above this line
+console.log(keys);
+
+for (const key of keys) {
+  values.push(apartment[key]);
 }
 
-console.log(includes([1, 2, 3, 4, 5], 17));
-console.log(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Uranus');
+console.log(values);
