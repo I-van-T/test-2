@@ -1,23 +1,18 @@
-const products = [
-  { name: 'Radar', price: 1300, quantity: 4 },
-  { name: 'Scanner', price: 2700, quantity: 3 },
-  { name: 'Droid', price: 400, quantity: 7 },
-  { name: 'Grip', price: 1200, quantity: 9 },
-];
+// Change code below this line
+function addOverNum(...args) {
+  let total = 0;
+  const start = args[0];
 
-function getAllPropValues(propName) {
-  // Change code below this line
-  const newArray = [];
-  const keys = Object.keys(products);
-  const values = Object.values(products);
-  for (const key of keys) {
-    if (propName === key) {
-      newArray.push(products.values);
-
-      return newArray;
+  for (const arg of args) {
+    if (start < arg) {
+      total += arg;
     }
-    console.log(newArray);
   }
+  console.log(total);
+  console.log(start);
+
+  return total;
 
   // Change code above this line
 }
+addOverNum(10, 12, 4, 11, 48, 10, 8);
