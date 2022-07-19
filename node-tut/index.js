@@ -1,3 +1,3 @@
-// index.js
+// // index.js
 const message = 'NodeJS in amazing!';
 console.log(message);
