@@ -1,29 +1,21 @@
-const pizzaPalace = {
-  pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
-  order(pizzaName, onSuccess, onError) {
-    const fatalError = `There is no pizza with a name ${pizzaName} in the assortment.`;
-    if (!this.pizzas.includes(pizzaName)) {
-      return onError(fatalError);
+function getCommonElements(firstArray, secondArray) {
+  const commonElements = [];
+  // Change code below this line
+
+  // for (let i = 0; i < firstArray.length; i += 1) {
+  //   if (secondArray.includes(firstArray[i])) {
+  //     commonElements.push(firstArray[i]);
+  //   }
+  // }
+
+  firstArray.forEach(function (number, index) {
+    if (secondArray.includes(firstArray[index])) {
+      commonElements.push(firstArray[index]);
     }
-    return onSuccess(pizzaName);
-  },
-};
-// Change code above this line
+  });
 
-// Callback for onSuccess
-function makePizza(pizzaName) {
-  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+  return commonElements;
+  // Change code above this line
 }
 
-// Callback for onError
-function onOrderError(error) {
-  return `Error! ${error}`;
-}
-
-// Method calls with callbacks
-pizzaPalace.order('Smoked', makePizza, onOrderError);
-pizzaPalace.order('Four meats', makePizza, onOrderError);
-pizzaPalace.order('Big Mike', makePizza, onOrderError);
-pizzaPalace.order('Vienna', makePizza, onOrderError);
-
-// help me!
+console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
