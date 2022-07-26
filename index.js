@@ -6,9 +6,7 @@ const users = [
     friends: ['Sharron Pace'],
     isActive: false,
     balance: 2811,
-    skills: ['ipsum', 'lorem'],
     gender: 'male',
-    age: 37,
   },
   {
     name: 'Sharlene Bush',
@@ -17,9 +15,7 @@ const users = [
     friends: ['Briana Decker', 'Sharron Pace'],
     isActive: true,
     balance: 3821,
-    skills: ['tempor', 'mollit', 'commodo', 'veniam', 'laborum'],
     gender: 'female',
-    age: 34,
   },
   {
     name: 'Ross Vazquez',
@@ -28,9 +24,7 @@ const users = [
     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
     isActive: false,
     balance: 3793,
-    skills: ['nulla', 'anim', 'proident', 'ipsum', 'elit'],
     gender: 'male',
-    age: 24,
   },
   {
     name: 'Elma Head',
@@ -39,9 +33,7 @@ const users = [
     friends: ['Goldie Gentry', 'Aisha Tran'],
     isActive: true,
     balance: 2278,
-    skills: ['adipisicing', 'irure', 'velit'],
     gender: 'female',
-    age: 21,
   },
   {
     name: 'Carey Barr',
@@ -50,9 +42,7 @@ const users = [
     friends: ['Jordan Sampson', 'Eddie Strong'],
     isActive: true,
     balance: 3951,
-    skills: ['ex', 'culpa', 'nostrud'],
     gender: 'male',
-    age: 27,
   },
   {
     name: 'Blackburn Dotson',
@@ -61,9 +51,7 @@ const users = [
     friends: ['Jacklyn Lucas', 'Linda Chapman'],
     isActive: false,
     balance: 1498,
-    skills: ['non', 'amet', 'ipsum'],
     gender: 'male',
-    age: 38,
   },
   {
     name: 'Sheree Anthony',
@@ -72,15 +60,14 @@ const users = [
     friends: ['Goldie Gentry', 'Briana Decker'],
     isActive: true,
     balance: 2764,
-    skills: ['lorem', 'veniam', 'culpa'],
     gender: 'female',
-    age: 39,
   },
 ];
-// Change code below this line
-const getUserNames = users => {
-  const userName = users.map(user => user.name);
-  return userName;
-  console.log(userName);
-};
-// Change code above this line
+
+// console.log(users);
+
+const totalFriends = users.reduce((allFriends, user) => {
+  return (allFriends += user.friends.length);
+}, 0);
+
+console.log(totalFriends);
