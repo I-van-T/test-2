@@ -39,7 +39,7 @@ const users = [
     name: 'Carey Barr',
     email: 'careybarr@nurali.com',
     eyeColor: 'blue',
-    friends: ['Jordan Sampson', 'Eddie Strong'],
+    friends: ['Jordan Sampson', 'Eddie Strong', 'Adrian Cross'],
     isActive: true,
     balance: 3951,
     gender: 'male',
@@ -48,7 +48,7 @@ const users = [
     name: 'Blackburn Dotson',
     email: 'blackburndotson@furnigeer.com',
     eyeColor: 'brown',
-    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    friends: ['Jacklyn Lucas', 'Linda Chapman', 'Adrian Cross', 'Solomon Fokes'],
     isActive: false,
     balance: 1498,
     gender: 'male',
@@ -66,8 +66,17 @@ const users = [
 
 // console.log(users);
 
-const totalFriends = users.reduce((allFriends, user) => {
-  return (allFriends += user.friends.length);
-}, 0);
+const mapFriends = [...users]
+  .sort((a, b) => a.friends.length - b.friends.length)
+  .map(user => user.name);
+// .sort((a, b) => b - a);
 
-console.log(totalFriends);
+// users.filter(user => user.friends);
+
+// users.sort((a, b) => a.user.friends - b.user.friends);
+
+console.log(mapFriends);
+
+// const sortFriends = mapFriends.sort((a, b) => b - a);
+
+// console.log(sortFriends);
